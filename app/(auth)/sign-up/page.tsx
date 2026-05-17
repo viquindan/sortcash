@@ -42,7 +42,7 @@ export default function SignUpPage({
         <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         <div>
           <blockquote className="text-white/80 text-2xl font-light leading-relaxed mb-6">
-            "Your finances, without borders."
+            &ldquo;Your finances, without borders.&rdquo;
           </blockquote>
           <p className="text-white/40 text-sm">
             Designed for executives and expats managing accounts across Latin America, Europe, and the United States.

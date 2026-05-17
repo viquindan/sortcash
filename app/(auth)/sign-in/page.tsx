@@ -39,7 +39,7 @@ export default function SignInPage({
         <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         <div>
           <blockquote className="text-white/80 text-2xl font-light leading-relaxed mb-6">
-            "Tus finanzas, sin fronteras."
+            &ldquo;Tus finanzas, sin fronteras.&rdquo;
           </blockquote>
           <p className="text-white/40 text-sm">
             Control total para profesionales internacionales con cuentas en múltiples países.
