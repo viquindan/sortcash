@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import { LogoFull } from "@/components/ui/Logo";
@@ -39,7 +39,7 @@ const t = {
   },
 };
 
-export default function ResetPasswordPage() {
+function ResetPasswordContent() {
   const { lang } = useLang();
   const tr = t[lang];
   const params = useSearchParams();
@@ -123,7 +123,7 @@ export default function ResetPasswordPage() {
   }
 
   return (
-    <div className="min-h-screen flex bg-background">
+    <div className="min-h-screen flex bg-background" suppressHydrationWarning>
       <div className="hidden lg:flex w-1/2 bg-navy flex-col justify-between p-12">
         <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         <div>
@@ -181,5 +181,13 @@ export default function ResetPasswordPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ResetPasswordPage() {
+  return (
+    <Suspense>
+      <ResetPasswordContent />
+    </Suspense>
   );
 }
