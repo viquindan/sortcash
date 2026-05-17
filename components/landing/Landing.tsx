@@ -1,10 +1,53 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, Upload, Globe, Zap } from "lucide-react";
 import { LogoFull } from "@/components/ui/Logo";
 import { useLang } from "@/lib/i18n/useLang";
 import { translations, BANKS } from "@/lib/i18n/translations";
+
+const BANK_DOMAINS: Record<string, string> = {
+  "Banistmo":        "banistmo.com",
+  "BAC Credomatic":  "baccredomatic.com",
+  "Banco General":   "bangeneral.com",
+  "Global Bank":     "globalbank.com.pa",
+  "Multibank":       "multibankgroup.com",
+  "Scotiabank":      "scotiabank.com",
+  "Bank of America": "bankofamerica.com",
+  "Chase":           "chase.com",
+  "Citibank":        "citi.com",
+  "Wells Fargo":     "wellsfargo.com",
+  "Charles Schwab":  "schwab.com",
+  "Fidelity":        "fidelity.com",
+  "HSBC":            "hsbc.com",
+  "Santander":       "santander.com",
+  "Davivienda":      "davivienda.com",
+  "Bancolombia":     "bancolombia.com",
+};
+
+function BankCard({ name }: { name: string }) {
+  const domain = BANK_DOMAINS[name];
+  const logoUrl = domain
+    ? `https://www.google.com/s2/favicons?domain=${domain}&sz=64`
+    : null;
+
+  return (
+    <div className="flex items-center gap-2.5 px-4 py-2.5 bg-white border border-border rounded-xl shadow-sm hover:border-accent/30 hover:shadow-md transition-all duration-200">
+      {logoUrl && (
+        <Image
+          src={logoUrl}
+          alt={name}
+          width={20}
+          height={20}
+          className="rounded-sm shrink-0"
+          unoptimized
+        />
+      )}
+      <span className="text-sm text-text font-medium whitespace-nowrap">{name}</span>
+    </div>
+  );
+}
 
 const FEATURE_ICONS = [Upload, Globe, Zap];
 
@@ -136,13 +179,7 @@ export function Landing() {
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {BANKS[key].map((bank) => (
-                    <span
-                      key={bank}
-                      className="px-4 py-2 bg-white border border-border rounded-lg text-sm text-text font-medium shadow-sm"
-                    >
-                      {bank}
-                    </span>
-                  ))}
+                    <BankCard key={bank} name={bank} />
                 </div>
               </div>
             ))}
