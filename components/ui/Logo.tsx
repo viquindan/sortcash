@@ -14,8 +14,8 @@ export function LogoIcon({ size = 44, className = "", onDark = false }: LogoIcon
       alt="Sort Cash"
       width={size}
       height={size}
-      className={`object-contain ${onDark ? "" : "mix-blend-multiply"} ${className}`}
-      style={{ background: "transparent" }}
+      className={`object-contain ${className}`}
+      style={{ mixBlendMode: onDark ? undefined : "multiply" }}
     />
   );
 
