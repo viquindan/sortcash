@@ -89,11 +89,6 @@ export function Landing() {
       <section className="relative bg-gradient-to-b from-[#EEF3FF] via-[#F4F7FF] to-white overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(27,63,139,0.12),transparent)]" />
         <div className="relative max-w-4xl mx-auto px-6 py-32 text-center">
-          <div className="inline-flex items-center gap-2 bg-white border border-border text-accent text-xs font-semibold px-3.5 py-1.5 rounded-full mb-10 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-green animate-pulse" />
-            {tr.hero.badge}
-          </div>
-
           <h1 className="text-5xl md:text-7xl font-bold text-navy tracking-tight leading-[1.05] mb-6 whitespace-pre-line">
             {tr.hero.tagline}
           </h1>
@@ -180,6 +175,7 @@ export function Landing() {
                 <div className="flex flex-wrap justify-center gap-2">
                   {BANKS[key].map((bank) => (
                     <BankCard key={bank} name={bank} />
+                  ))}
                 </div>
               </div>
             ))}
