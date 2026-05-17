@@ -38,7 +38,7 @@ export default async function DashboardLayout({
       <aside className="w-64 bg-navy flex flex-col flex-shrink-0">
         {/* Logo */}
         <div className="h-16 flex items-center px-5 border-b border-white/10">
-          <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
+          <LogoFull onDark className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         </div>
 
         {/* Nav */}
