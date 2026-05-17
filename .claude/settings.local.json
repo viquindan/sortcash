@@ -1,0 +1,50 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/sign-in)",
+      "Bash(curl -s -o /dev/null -w \"sign-in: %{http_code}\\\\n\" http://localhost:3000/sign-in)",
+      "Bash(curl -s -o /dev/null -w \"css: %{http_code}\\\\n\" \"http://localhost:3000/_next/static/css/app/layout.css\")",
+      "Read(//tmp/**)",
+      "Bash(curl -s \"http://localhost:3000/sign-in\")",
+      "Bash(curl -s -o /dev/null -w \"css: %{http_code}\\\\n\" \"http://localhost:3000/_next/static/css/app/layout.css?v=1778864604675\")",
+      "Bash(curl -s -o /dev/null -w \"worker: %{http_code}\\\\n\" http://localhost:3000/pdf.worker.min.mjs)",
+      "Bash(curl -s -o /dev/null -w \"worker: %{http_code} | size: %{size_download} bytes\\\\n\" http://localhost:3000/pdf.worker.min.mjs)",
+      "Bash(npx kill-port *)",
+      "Bash(rm -rf .next)",
+      "Bash(npx drizzle-kit *)",
+      "Read(//c/Users/lidic/AppData/Local/Temp/claude/c--Users-lidic-OneDrive-1DANIEL-0-Alma-Partners-Antigravity/Netflow/7498973a-010a-4690-a936-1184aac361bb/tasks/**)",
+      "PowerShell(Get-Process -Id 32780, 23616, 29360, 22140)",
+      "PowerShell(Get-Process -Id 32780, 23616, 29360, 22140 -ErrorAction SilentlyContinue)",
+      "PowerShell(32780, 23616, 29360, 22140 | ForEach-Object { $p = Get-Process -Id $_ -ErrorAction SilentlyContinue; if \\($p\\) { \"$_ -> $\\($p.ProcessName\\)\" } else { \"$_ -> \\(no encontrado\\)\" } })",
+      "Read(//c/Users/lidic/.claude/plans/**)",
+      "Bash(npx next *)",
+      "PowerShell(Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c\", \"cd /d `\"c:\\\\Users\\\\lidic\\\\OneDrive\\\\1DANIEL\\\\0 Alma Partners\\\\Antigravity\\\\Netflow`\" && npm run dev > C:\\\\tmp\\\\netflow-dev.log 2>&1\" -WindowStyle Hidden)",
+      "PowerShell(Get-Process node -ErrorAction SilentlyContinue)",
+      "PowerShell(Stop-Process -Force)",
+      "PowerShell(Start-Sleep -Seconds 3; $response = Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 10; Write-Host \"Status: $\\($response.StatusCode\\)\"; Write-Host \"Content-Length: $\\($response.Content.Length\\) chars\"; if \\($response.Content -match \"Netflow|Dashboard|sign-in\"\\) { Write-Host \"App cargando correctamente\" } else { Write-Host \"Contenido inesperado\" })",
+      "PowerShell($src = \"c:\\\\Users\\\\lidic\\\\OneDrive\\\\1DANIEL\\\\0 Alma Partners\\\\Antigravity\\\\Netflow\")",
+      "PowerShell($dst = \"C:\\\\Projects\\\\Netflow\")",
+      "PowerShell(Start-Process -FilePath \"cmd.exe\" -ArgumentList \"/c\", \"cd /d C:\\\\Projects\\\\Netflow && npm run dev > C:\\\\tmp\\\\netflow-dev.log 2>&1\" -WindowStyle Hidden)",
+      "PowerShell(Start-Sleep -Seconds 3; $r = Invoke-WebRequest -Uri \"http://localhost:3000/sign-in\" -UseBasicParsing -TimeoutSec 10; Write-Host \"HTTP $\\($r.StatusCode\\) — $\\($r.Content.Length\\) bytes\"; if \\($r.Content -match \"Netflow|sign|email\"\\) { Write-Host \"OK\" })",
+      "Bash(curl -s -X POST 'https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU' -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(python -c ' *)",
+      "Bash(curl -s -X POST 'https://generativelanguage.googleapis.com/v1beta/models/imagen-3.0-generate-001:predict?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU' -H 'Content-Type: application/json' -d '{\"instances\": [{\"prompt\": \"test\"}], \"parameters\": {\"sampleCount\": 1}}')",
+      "Bash(curl -s \"https://generativelanguage.googleapis.com/v1beta/models?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU\")",
+      "Bash(curl -s -X POST 'https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU' -H 'Content-Type: application/json' -d '{ *)",
+      "Bash(curl -s -X POST 'https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU' -H 'Content-Type: application/json' -d '{\"instances\": [{\"prompt\": \"simple blue square icon\"}], \"parameters\": {\"sampleCount\": 1}}')",
+      "Bash(curl -s -X POST 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=AIzaSyCT2DHJ1aRSzOV1Mhz1pMqFarMDx2t1nEU' -H 'Content-Type: application/json' -d '{ *)",
+      "Read(//c/Users/lidic/.ssh/**)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)"
+    ],
+    "additionalDirectories": [
+      "C:\\tmp",
+      "C:\\Projects",
+      "c:\\Users\\lidic\\OneDrive\\1DANIEL\\0 Alma Partners\\Antigravity\\Netflow\\.claude"
+    ]
+  }
+}
