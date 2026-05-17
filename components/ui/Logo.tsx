@@ -1,36 +1,21 @@
-import Image from "next/image";
 import Link from "next/link";
 
 interface LogoIconProps {
   size?: number;
   className?: string;
-  onDark?: boolean;
 }
 
-export function LogoIcon({ size = 44, className = "", onDark = false }: LogoIconProps) {
-  const img = (
-    <Image
+export function LogoIcon({ size = 44, className = "" }: LogoIconProps) {
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
       src="/logo.png"
       alt="Sort Cash"
       width={size}
       height={size}
       className={`object-contain ${className}`}
-      style={{ mixBlendMode: onDark ? undefined : "multiply" }}
     />
   );
-
-  if (onDark) {
-    return (
-      <div
-        className="bg-white rounded-xl flex items-center justify-center shrink-0"
-        style={{ width: size + 8, height: size + 8, padding: 4 }}
-      >
-        {img}
-      </div>
-    );
-  }
-
-  return img;
 }
 
 export function LogoFull({
@@ -44,7 +29,13 @@ export function LogoFull({
 }) {
   const content = (
     <div className={`flex items-center gap-2.5 ${className}`}>
-      <LogoIcon size={36} onDark={onDark} />
+      {onDark ? (
+        <div className="bg-white rounded-xl flex items-center justify-center shrink-0 p-1">
+          <LogoIcon size={34} />
+        </div>
+      ) : (
+        <LogoIcon size={36} />
+      )}
       <span className="text-xl font-bold tracking-tight text-navy leading-none">
         Sort<span className="text-accent">Cash</span>
       </span>
