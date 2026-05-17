@@ -36,7 +36,7 @@ export default function SignInPage({
     <div className="min-h-screen flex bg-background">
       {/* Left panel */}
       <div className="hidden lg:flex w-1/2 bg-navy flex-col justify-between p-12">
-        <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
+        <LogoFull href="/" className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         <div>
           <blockquote className="text-white/80 text-2xl font-light leading-relaxed mb-6">
             &ldquo;Tus finanzas, sin fronteras.&rdquo;
@@ -52,7 +52,7 @@ export default function SignInPage({
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-sm">
           <div className="lg:hidden mb-10 flex justify-center">
-            <LogoFull />
+            <LogoFull href="/" />
           </div>
 
           <h1 className="text-2xl font-bold text-text mb-1">Bienvenido de nuevo</h1>

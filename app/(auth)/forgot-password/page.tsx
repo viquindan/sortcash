@@ -53,7 +53,7 @@ export default function ForgotPasswordPage() {
   return (
     <div className="min-h-screen flex bg-background">
       <div className="hidden lg:flex w-1/2 bg-navy flex-col justify-between p-12">
-        <LogoFull className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
+        <LogoFull href="/" className="[&_span]:text-white [&_span.text-accent]:text-blue-400" />
         <div>
           <p className="text-white/80 text-2xl font-light leading-relaxed mb-6">
             {lang === "es" ? "Tus finanzas, sin fronteras." : "Your finances, without borders."}
@@ -65,7 +65,7 @@ export default function ForgotPasswordPage() {
       <div className="flex-1 flex items-center justify-center p-8">
         <div className="w-full max-w-sm">
           <div className="lg:hidden mb-10 flex justify-center">
-            <LogoFull />
+            <LogoFull href="/" />
           </div>
 
           {status === "done" ? (

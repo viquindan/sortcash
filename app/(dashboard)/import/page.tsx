@@ -4,7 +4,8 @@ import { useState, useCallback } from "react";
 import { useDropzone } from "react-dropzone";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { UploadCloud, FileType, CheckCircle, AlertTriangle, Building2, User } from "lucide-react";
+import { UploadCloud, FileType, CheckCircle, AlertTriangle, User } from "lucide-react";
+import { BankLogo } from "@/components/ui/BankLogo";
 import { parseFile } from "@/lib/parsers";
 import type { ParseResult } from "@/lib/parsers/bankDetect";
 
@@ -175,7 +176,7 @@ export default function ImportPage() {
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-3">
               <div className="flex items-center gap-3 p-3 bg-surface rounded-lg border border-border">
-                <Building2 size={18} className="text-accent shrink-0" />
+                <BankLogo bank={parsed.bank} size={36} />
                 <div>
                   <p className="text-xs text-muted">Banco detectado</p>
                   <p className="text-sm font-medium text-text">{parsed.bank}</p>
