@@ -130,28 +130,28 @@ export default function OverviewClient({ initialTransactions }: { initialTransac
 
   return (
     <div className="space-y-6 max-w-6xl mx-auto">
-      <div className="flex items-center justify-between">
-        <div className="flex items-center gap-4">
-          <h2 className="text-3xl font-serif font-bold text-accent">Dashboard</h2>
+      <div className="flex flex-wrap items-center gap-3 justify-between">
+        <div className="flex items-center gap-3 flex-wrap">
+          <h2 className="text-2xl sm:text-3xl font-serif font-bold text-accent">Dashboard</h2>
           {/* Total / Promedio tabs */}
           <div className="flex rounded-lg border border-border overflow-hidden text-sm font-medium">
             <button
               onClick={() => setViewMode("total")}
-              className={`px-4 py-1.5 transition-colors ${viewMode === "total" ? "bg-accent text-white" : "bg-surface text-text hover:bg-accentPale"}`}
+              className={`px-3 sm:px-4 py-1.5 transition-colors ${viewMode === "total" ? "bg-accent text-white" : "bg-surface text-text hover:bg-accentPale"}`}
             >
               Total
             </button>
             <button
               onClick={() => setViewMode("promedio")}
-              className={`px-4 py-1.5 transition-colors ${viewMode === "promedio" ? "bg-accent text-white" : "bg-surface text-text hover:bg-accentPale"}`}
+              className={`px-3 sm:px-4 py-1.5 transition-colors ${viewMode === "promedio" ? "bg-accent text-white" : "bg-surface text-text hover:bg-accentPale"}`}
             >
               Promedio
             </button>
           </div>
         </div>
         <Link href="/import">
-          <Button variant="outline" className="flex items-center gap-2">
-            <UploadCloud size={20} />
+          <Button variant="outline" className="flex items-center gap-2 text-sm">
+            <UploadCloud size={18} />
             <span>Importar</span>
           </Button>
         </Link>

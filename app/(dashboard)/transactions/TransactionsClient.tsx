@@ -155,13 +155,13 @@ export default function TransactionsClient({
 
   return (
     <div className="space-y-4">
-      <h2 className="text-3xl font-serif font-bold text-accent">Movimientos</h2>
+      <h2 className="text-2xl sm:text-3xl font-serif font-bold text-accent">Movimientos</h2>
 
       <MonthTabs months={months} selectedMonth={selectedMonth} onSelect={m => { setSelectedMonth(m); setPage(1); }} />
 
       <Card>
-        <div className="overflow-x-auto">
-          <table className="w-full text-left text-sm text-text">
+        <div className="overflow-x-auto -mx-px">
+          <table className="w-full min-w-[560px] text-left text-sm text-text">
             <thead className="bg-surface border-b border-border">
               <tr>
                 <th className="px-4 py-3 w-10">
@@ -295,7 +295,7 @@ export default function TransactionsClient({
       </Card>
 
       {selected.size > 0 && (
-        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-3 px-5 py-3 rounded-2xl shadow-2xl border border-border bg-background/95 backdrop-blur-sm">
+        <div className="fixed bottom-6 left-1/2 -translate-x-1/2 md:left-[calc(50%+8rem)] md:-translate-x-1/2 z-50 flex flex-wrap items-center gap-2 sm:gap-3 px-4 sm:px-5 py-3 rounded-2xl shadow-2xl border border-border bg-background/95 backdrop-blur-sm max-w-[calc(100vw-2rem)] sm:max-w-none">
           <Tag size={16} className="text-accent shrink-0" />
           <span className="text-sm font-medium whitespace-nowrap">
             {selected.size} {selected.size === 1 ? "seleccionada" : "seleccionadas"}

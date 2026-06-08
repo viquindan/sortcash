@@ -17,10 +17,10 @@ export function NetflowArea({ data }: { data: MonthlyData[] }) {
     return <div className="h-72 flex items-center justify-center text-muted text-sm">No hay datos suficientes</div>;
   }
 
-  if (!mounted) return <div className="h-72" />;
+  if (!mounted) return <div className="h-52 sm:h-64 md:h-72" />;
 
   return (
-    <div className="h-72 w-full">
+    <div className="h-52 sm:h-64 md:h-72 w-full">
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <defs>

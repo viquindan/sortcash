@@ -82,7 +82,7 @@ export default function AveragesClient({ initialTransactions }: { initialTransac
   return (
     <div className="space-y-6">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-        <h2 className="text-3xl font-serif font-bold text-accent">Promedios</h2>
+        <h2 className="text-2xl sm:text-3xl font-serif font-bold text-accent">Promedios</h2>
         
         <div className="flex items-center gap-4 bg-surface p-2 rounded-lg border border-border">
           <div className="flex items-center gap-2">
@@ -113,7 +113,7 @@ export default function AveragesClient({ initialTransactions }: { initialTransac
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <KpiCard title="Promedio Ingresos/mes" amount={avgKpis.income} type="income" />
         <KpiCard title="Promedio Gastos/mes" amount={avgKpis.expense} type="expense" />
         <KpiCard title="Promedio Flujo Neto/mes" amount={avgKpis.net} type="net" />

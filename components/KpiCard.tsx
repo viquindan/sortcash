@@ -15,10 +15,10 @@ export function KpiCard({ title, amount, type }: KpiCardProps) {
 
   return (
     <Card>
-      <CardContent className="p-6 flex flex-col justify-between h-full">
+      <CardContent className="p-4 sm:p-6 flex flex-col justify-between h-full">
         <h3 className="text-sm font-medium text-muted mb-2">{title}</h3>
         <p
-          className={cn("text-3xl font-serif font-bold", {
+          className={cn("text-2xl sm:text-3xl font-serif font-bold", {
             "text-green": type === "income",
             "text-red": type === "expense",
             "text-accent": type === "net",
